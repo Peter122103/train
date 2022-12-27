@@ -1,0 +1,49 @@
+html,
+body {
+    height: 100%;
+}
+h1 {
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+    background: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    vertical-align: middle;
+    flex-direction: column;
+}
+.prediction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2.75px;
+}
+
+.num {
+    width: 30px;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+
+}
+
+.label {
+    width: 200px;
+    height: 15px;
+    background-color: white;
+}
+
+.bar {
+    width: 0px;
+    height: 100%;
+    background-color: #87A2FB;
+}
+#canvas {
+    width: 280px;
+    height: 280px;
+    background-color: white;
+}
