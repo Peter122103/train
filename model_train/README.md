@@ -1,6 +1,6 @@
 # MNIST model training
-```models.py``` 為模型定義程式
-```train.py``` 為模型訓練程式
+* ```models.py``` 為模型定義程式
+* ```train.py``` 為模型訓練程式
 # Installation
 * create training enviroment
 ```
