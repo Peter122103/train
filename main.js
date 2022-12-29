@@ -1,9 +1,8 @@
 const CANVAS_SIZE = 280;
 const CANVAS_SCALE = 0.1;
 const INFERENCE_SIZE = 28;
-
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas"); 
+var ctx = canvas.getContext("2d");
 const rect = canvas.getBoundingClientRect();
 
 const hiddenCanvas = document.getElementById("hiddenCanvas");
@@ -17,7 +16,7 @@ let y1 = 0;
 let x2 = 0;
 let y2 = 0;
 
-ctx.lineWidth = 15;
+ctx.lineWidth = 10;
 ctx.lineCap = 'round'
 ctx.lineJoin = "round";
 
@@ -99,3 +98,20 @@ loadingModelPromise.then(() => {
     canvas.addEventListener("mousemove", touchMove);
     canvas.addEventListener("mouseup", touchEnd);
 });
+
+//reset
+document.getElementById('reset').addEventListener('click', function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }, false);
+
+//color change
+  var colors = ['Tomato', 'DodgerBlue', 'MediumAquaMarine', 'MediumPurple']
+  function listener(i) {
+    document.getElementById(colors[i]).addEventListener('click', function() {
+      ctx.strokeStyle = colors[i];
+    }, false);
+  }
+
+  for(var i = 0; i < colors.length; i++) {
+    listener(i);
+  }
